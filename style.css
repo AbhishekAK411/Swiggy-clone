@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;
+    
+    
+}
+
+#screen{
+    width: 100%;
+    height: 1000px;
+    border: 1px solid black;
+}
+
+.delivery-location{
+    display: flex;
+    width: 100%;
+    height: 550px;
+    /* border: 1px solid red; */
+}
+
+.left-locationside{
+    width: 56%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+.logo{
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 6%;
+    height: 100px;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+.logo > div:nth-child(1){
+    width: 260px;
+    height: 85%;
+    /* border: 1px solid green; */
+    margin-left: 9%;
+}
+
+.logo img{
+    width: 80%;
+    height: 78%;
+    color: rgb(253,140,47);
+}
+
+.login-signup{
+    width: 250px;
+    height: 40%;
+    /* border: 1px solid green; */
+    margin-left: 18%;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.login{
+    width: 47%;
+    height: 100%;
+    background-color: white;
+}
+
+.login-button{
+    border: none;
+    background-color: white;
+    outline: none;
+    font-weight: 700;
+    padding-top: 12px;
+    padding-left: 50px;
+    font-size: 1.01em;
+    letter-spacing: 0.1px;
+}
+
+.signup{
+    width: 45%;
+    height: 100%;
+    background-color: black;
+}
+
+.signup-button{
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    padding-top: 12px;
+    padding-left: 25px;
+    font-weight: 700;
+    font-size: 1.01em;
+    letter-spacing: -0.1px;
+}
+
+
+
+.right-login-image{
+    width: 44%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+}
+
+.right-login-image img{
+    width: 101%;
+    height: 100%;
+}
+
