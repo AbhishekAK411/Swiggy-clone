@@ -223,6 +223,7 @@
     border: 1px solid lightgrey;
     box-shadow:0 5px 10px rgb(0,0,0,0.5);
     transition: 0.2s;
+    border: none;
 }
 
 .rest-box:hover .quick-view{
@@ -238,5 +239,5 @@
     text-align: center;
     color: #5d8ed5;
     font-size: 0.8em;
-    font-weight: 700;
+    font-weight: 800;
 }
