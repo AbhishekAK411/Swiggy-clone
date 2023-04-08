@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#screen{
+    width: 100%;
+    height: 1000px;
+    /* border: 1px solid black; */
+}
+
+.top{
+    width: 100%;
+    height: 250px;
+    border: 0.1px solid white;
+    background-color: lightgrey;
+}
+
+.icon{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.icon i{
+    color: rgb(90,90,90);
+    scale: 0.6;
+}
+
+.description{
+    /* margin-top: 4%; */
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.text{
+    margin-top: auto;
+    margin-bottom: 1%;
+}
+
+.login-image{
+    width: 100px;
+    height: 200px;
+    margin-right: 2%;
+}
+
+.login-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.description h3{
+    text-transform: uppercase;
+    color: rgb(25,25,25);
+}
+
+.description p{
+    color: (170,170,170);
+}
+
+.input-field{
+    margin-top: 3%;
+    margin-left: 1%;
+}
+
+.input-field p{
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: rgb(90,90,90);
+}
+
+.input-field-main input{
+    width: 99%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+}
+
+.button{
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.button button{
+    width: 99%;
+    height: 50px;
+    text-transform: uppercase;
+    background-color: orange;
+    border: 1px solid lightgrey;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.privacy-policy{
+    margin-left: 1%;
+    margin-top: 0.5%;
+}
+
+.privacy-policy p{
+    font-size: 0.8em;
+}
