@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#screen{
+    width: 100%;
+    height: 667px;
+    background-color: rgb(242,93,5);
+    overflow: hidden;
+}
+
+.main-box{
+    width: 60%;
+    height: 500px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgb(0,0,0,0.5);
+    background-color: white;
+
+}
+
+.confetti{
+    width: 150px;
+    /* height: 150px; */
+    /* border: 1px solid blue; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.confetti img{
+    width: 100%;
+    height: 100%;
+}
+
+.success-msg{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.success-msg h1{
+    text-transform: uppercase;
+}
+
+.success-msg p{
+    margin-top: 2%;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.explore-button{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.explore-button button{
+    width: 250px;
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.5);
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.explore-button button:hover{
+    background-color: rgb(223,98,26);
+    transition: 0.2s;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.explore-button button:hover i{
+    scale: 1.3;
+    transition: 0.2s;
+    color: white;
+}
+
+.explore-button button i{
+    margin-right: 5%;
+}
