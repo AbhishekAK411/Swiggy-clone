@@ -303,6 +303,7 @@
     /* border: 1px solid yellow; */
     position: relative;
     margin-left: 13%;
+    
 }
 
 .add-button button{
@@ -310,7 +311,10 @@
     height: 30px; 
     color: rgb(96,178,70);  
     text-transform: uppercase;
-    font-weight: bold;                                                    
+    font-weight: bold; 
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid lightgrey;                                                  
 }
 
 .add-button button:hover{
