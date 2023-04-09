@@ -7,9 +7,10 @@
 
 #screen{
     width: 100%;
-    height: 1000px;
-    border: 2px solid black;
+    height: 1200px;
+    /* border: 2px solid black; */
     background-color: rgb(233,236,238);
+    position: absolute;
 }
 
 .navbar{
@@ -24,7 +25,6 @@
     position: fixed;
     z-index: 1;
     top: 0;
-    
 }
 
 .navbar div{
@@ -87,4 +87,192 @@
 .tabs div i,p{
     font-size: 1.1em;
     color: rgb(61,65,82);
+}
+
+.main{
+    width: 90%;
+    height: 900px;
+    margin: auto;
+    margin-top: 7%;
+    border: 1px solid red;
+    /* background-color: white; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.loc-icon{
+    width: 3%;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+.address{
+    width: 63%;
+    height: 100%;
+    /* border: 1px solid lightgrey; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-top{
+    width: 100%;
+    height: 83%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.add-desc{
+    margin-top: 5%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid red; */
+}
+
+.add-desc h3{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(40,44,63);
+}
+
+.add-desc p{
+    font-size: 1.1em;
+    font-weight: 300;
+    color: rgb(126,128,140);
+}
+
+.add-toast{
+    width: 95%;
+    height: 550px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.toast{
+    width: 48%;
+    height: 250px;
+    border: 1px solid lightgrey;
+    display: flex;
+}
+
+.toast:hover{
+    box-shadow: 0 5px 10px rgb(0,0,0,0.25);
+}
+
+.dotted-toast{
+    width: 48%;
+    height: 250px;
+    border: 1px solid lightgrey;
+    border-style: dashed;
+    display: flex;
+}
+
+.dotted-toast:hover{
+    box-shadow: 0 5px 10px rgb(0,0,0,0.25);
+}
+
+.toast-main{
+    width: 95%;
+    height: 225px;
+    margin: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.toast-main div{
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.toast-icon{
+    color: rgb(96,178,70);
+}
+
+.toast-desc{
+    /* border: 1px solid blue; */
+}
+
+.toast-desc h3{
+    font-size: 1em;
+    color: rgb(40,44,63);
+    font-weight: 700;
+}
+
+.toast-desc p{
+    font-size: 0.8em;
+    color: rgb(147,149,159);
+    padding-right: 10px;
+    margin-bottom: 10%;
+    /* border: 1px solid yellow; */
+}
+
+.toast-desc span{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: rgb(40,44,63);
+}
+
+.toast-desc button{
+    width: 160px;
+    height: 40px;
+    background-color: rgb(96,178,70);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+
+.toast-remove h3{
+    font-size: 1em;
+    color: rgb(40,44,63);
+    font-weight: 700;
+}
+
+.toast-remove p{
+    font-size: 0.8em;
+    color: rgb(147,149,159);
+    padding-right: 10px;
+    margin-bottom: 10%;
+    /* border: 1px solid yellow; */
+}
+
+.toast-remove span{
+    display: none;
+}
+
+.toast-remove button{
+    width: 160px;
+    height: 40px;
+    background-color: white;
+    color: rgb(96,178,70);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-color: rgb(96,178,70);
+    outline: none;
+    border-radius: 2px;
+}
+
+.pay-bot{
+    width: 100%;
+    height: 15%;
+    border: 1px solid red;
+    background-color: white;
+}
+
+.order-list{
+    width: 30%;
+    height: 100%;
+    border: 1px solid green;
 }
