@@ -324,7 +324,43 @@
     height: 73%;
     border: 1px solid black;
     background-color: white;
+    position: relative;
 }
+
+.item-top{
+    width: 100%;
+    height: 15%;
+    border: 5px solid red;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-mid{
+    width: 100%;
+    height: 70%;
+    border: 5px solid blue;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-bot{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid green;
+}
+
+
+
+
+
 
 .order-bot{
     width: 100%;
