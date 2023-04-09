@@ -7,7 +7,7 @@
 
 #screen{
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     /* border: 2px solid black; */
     background-color: rgb(233,236,238);
     position: absolute;
@@ -91,7 +91,7 @@
 
 .main{
     width: 90%;
-    height: 900px;
+    height: 1000px;
     margin: auto;
     margin-top: 7%;
     border: 1px solid red;
@@ -117,8 +117,8 @@
 
 .add-top{
     width: 100%;
-    height: 83%;
-    border: 1px solid black;
+    height: 77%;
+    border: 1px solid lightgrey;
     background-color: white;
 }
 
@@ -140,6 +140,12 @@
     font-size: 1.1em;
     font-weight: 300;
     color: rgb(126,128,140);
+}
+
+.add-desc h4{
+    font-size: 1.1em;
+    font-weight: 300;
+    color: rgb(40,44,63);
 }
 
 .add-toast{
@@ -266,13 +272,109 @@
 
 .pay-bot{
     width: 100%;
-    height: 15%;
-    border: 1px solid red;
+    height: 20%;
+    border: 1px solid lightgrey;
     background-color: white;
 }
+
+.pay-button{
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.pay-button div{
+    margin: auto;
+}
+
+.p-but button{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+}
+
+.p-but button:hover{
+    box-shadow: 0 5px 10px rgb(0,0,0,0,2);
+    scale: 1.5;
+    transition: 0.5s;
+}
+
+.p-but button img{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .order-list{
     width: 30%;
     height: 100%;
     border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-top{
+    width: 100%;
+    height: 73%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.order-bot{
+    width: 100%;
+    height: 24%;
+    border: 1px solid red;
+    background-color: white;
+    padding-top: 5%;
+}
+
+.inner-border{
+    width: 85%;
+    height: 200px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: auto;   
+}
+
+.inner-border div{
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 2%;
+    /* margin-right: auto; */
+}
+
+.inner-border div h4{
+    font-size: 0.95em;
+    color: rgb(62,65,82);
+}
+
+.inner-border div p{
+    font-size: 0.7em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.inner-border div span{
+    font-size: 0.8em;
+    color: rgb(128,128,128);
+
+}
+
+.inner-border div button{
+    margin-top: 5%;
+    color: rgb(236,97,72);
+    background-color: white;
+    border-bottom: 1px solid rgb(236,97,72);
+    border-style: dashed;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 0.8em;
+    font-weight: bold;
 }
