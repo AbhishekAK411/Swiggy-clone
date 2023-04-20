@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://kit.fontawesome.com/3f39309145.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
+
 <body>
     <div id="screen">
         <div class="top">
@@ -20,23 +22,36 @@
                     <p>Enter your phone number to continue</p>
                 </div>
                 <div class="login-image">
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/create_account_graphics_2x_brdvrk" alt="" />
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/create_account_graphics_2x_brdvrk"
+                        alt="" />
                 </div>
             </div>
         </div>
 
+        <form onsubmit="login(event)">
+            <div class="input-field">
+                <div>
+                    <p>Email Address</p>
+                </div>
 
-        <div class="input-field">
-            <div>
-                <p>Phone Number</p>
+                <div class="input-field-main">
+                    <input id="login_email" type="email">
+                </div>
             </div>
+            <div class="input-field">
+                <div>
+                    <p>Password</p>
+                </div>
 
-            <div class="input-field-main">
-                <input>
+                <div class="input-field-main">
+                    <input id="login_password" type="password">
+                </div>
             </div>
-        </div>
+        </form>
+
+
         <div class="button">
-            <button>Continue</button>
+            <button onclick="login(event)">Continue</button>
         </div>
 
         <div class="privacy-policy">
@@ -44,6 +59,7 @@
         </div>
     </div>
 
-    
+    <script src="./swiggy.js"></script>
 </body>
+
 </html>
