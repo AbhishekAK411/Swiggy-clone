@@ -11,7 +11,16 @@ window.onload = () =>{
         p.innerText = swiggy_currentUser.userName;
         swiggy_div.append(p);
 
+        var logout_div = document.getElementById("logout");
+        var replace = `<button class="logout_style" onclick="swiggy_logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> <p>Logout</p><button>`;
+        logout_div.innerHTML = replace;
+
     } else {
         alert("Current User is absent");
     }
+}
+
+function swiggy_logout(){
+    localStorage.removeItem("swiggy_current_user");
+    window.location.reload();
 }
