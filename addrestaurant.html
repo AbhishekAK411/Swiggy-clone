@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="addRest.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Restaurant</title>
+</head>
+<body>
+    <form onsubmit="swiggy_restData(event)">
+        <label>Restaurant Name</label><br/>
+        <input id="swiggy_restName" type="text" placeholder="Enter Restaurant Name" /><br/><br/>
+        <label>Restaurant Price</label><br/>
+        <input id="swiggy_restPrice" type="number" placeholder="Enter Restaurant Price for one or two people" /><br/><br/>
+        <label>Restaurant Type</label><br/>
+        <input id="swiggy_restType" type="text" placeholder="Enter Restaurant type" /><br/><br/> 
+        <label>Restaurant Image URL</label><br/>
+        <input id="swiggy_restImg" type="text" placeholder="Enter restaurant URL" /><br/><br/>
+        <input type="submit" value="Send Data" /><br/>
+    </form>
+</body>
+</html>
