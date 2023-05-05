@@ -7,7 +7,7 @@ window.onload = () =>{
     var insertRestIntoDiv = document.getElementById("rest_insert");
 
     for(var i=0;i<ls.length;i++){
-        finalData += `<div class="rest-box"><div class="rest-info"> <div><img src="${ls[i].s_restImg}" alt="" /></div> <div><h4>${ls[i].s_restName}</h4></div> <div><p>${ls[i].s_restType}</p></div> <div><button><i class="fa-solid fa-star"></i> 4.4 </button> <p>23 mins</p> <p>₹${ls[i].s_restPrice} for two</p></div> </div><div class="quick-view"><p>QUICK VIEW</p></div></div>`;
+        finalData += `<div onclick='swiggy_redirect(${JSON.stringify(ls[i])})' class="rest-box"><div class="rest-info"> <div><img src="${ls[i].s_restImg}" alt="" /></div> <div><h4>${ls[i].s_restName}</h4></div> <div><p>${ls[i].s_restType}</p></div> <div><button><i class="fa-solid fa-star"></i> 4.4 </button> <p>23 mins</p> <p>₹${ls[i].s_restPrice} for two</p></div> </div><div class="quick-view"><p>QUICK VIEW</p></div></div>`;
         insertRestIntoDiv.innerHTML = finalData;
     }
 
@@ -27,6 +27,13 @@ window.onload = () =>{
     } else {
         console.log("Current User is absent");
     }
+}
+
+function swiggy_redirect(swiggy_product){
+    var swiggy_currentRest = JSON.stringify(swiggy_product);
+
+    localStorage.setItem("swiggy_currentRest", swiggy_currentRest);
+    window.location.href = `./singlerest.html`;
 }
 
 function swiggy_logout(){
