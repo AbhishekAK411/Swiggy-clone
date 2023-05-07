@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Restaurant Products</title>
+</head>
+<body>
+    <form onsubmit="singleRestProducts(event)">
+        <label>Product Name</label><br/>
+        <input id="mcd_prodName" type="text" placeholder="Enter product name" /><br/><br/>
+        <label>Product Price</label><br/>
+        <input id="mcd_prodPrice" type="number" placeholder="Enter product price" /><br/><br/>
+        <label>Product Image</label><br/>
+        <input id="mcd_prodImg" type="text" placeholder="Enter product Image URL" /><br/><br/>
+        <input type="submit" value="Send Data" /><br/>
+    </form>
+
+    <script>
+        function singleRestProducts(event){
+            event.preventDefault();
+
+            var m_prodname = document.getElementById("mcd_prodName").value;
+            var m_prodprice = document.getElementById("mcd_prodPrice").value;
+            var m_prodimg = document.getElementById("mcd_prodImg").value;
+            var singleprodobj = {m_prodname,m_prodprice,m_prodimg};
+
+            var singleprodarr = JSON.parse(localStorage.getItem("single_mcd_products")) || [];
+            singleprodarr.push(singleprodobj);
+
+            localStorage.setItem("single_mcd_products", JSON.stringify(singleprodarr));
+            alert("product added");
+        }
+    </script>
+</body>
+</html>

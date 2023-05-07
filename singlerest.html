@@ -116,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rest-items">
+            <div id="replace-items" class="rest-items">
                 <div class="title">
                     <p>Recommended (9)</p>
                     <i class="fa-solid fa-angle-up"></i>
@@ -137,35 +137,10 @@
 
                     <div class="item-image">
                         <div id="replace-image" class="item-image-desc">
-                            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" />
+                            <!-- <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" /> -->
                         </div>
-                        <div class="add-button">
-                            <button>Add</button>
-                        </div>
-                    </div>
-
-                    
-                </div>
-
-                <div class="item">
-                    <div class="item-desc">
-                        <div class="veg-logo">
-                            <img src="https://icon2.cleanpng.com/20180601/ae/kisspng-vegetarian-cuisine-biryani-indian-cuisine-vegetabl-vegetarian-5b11c2357677b7.0724399215278904854853.jpg" alt="" />
-                        </div>
-                        <div class="desc">
-                            <h3>Veg Maharaja Mac</h3>
-                            <span>₹220</span>
-                            <p>Enjoy the tallest burgers innovated by us. Created with perfectly fried corn and cheese patty paired along with fresh ingredients like jalape??o, onion, slice of cheese & crunchy lettuce dressed with cocktail sauce.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="item-image">
-                        <div class="item-image-desc">
-                            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" />
-                        </div>
-                        <div class="add-button">
-                            <button>Add</button>
+                        <div id="replace-cart" class="add-button">
+                            <!-- <button>Add</button> -->
                         </div>
                     </div>
 
@@ -245,6 +220,29 @@
                     </div>
 
                     
+                </div>
+
+                <div class="item">
+                    <div class="item-desc">
+                        <div class="veg-logo">
+                            <img src="https://icon2.cleanpng.com/20180601/ae/kisspng-vegetarian-cuisine-biryani-indian-cuisine-vegetabl-vegetarian-5b11c2357677b7.0724399215278904854853.jpg" alt="" />
+                        </div>
+                        <div class="desc">
+                            <h3>Veg Maharaja Mac</h3>
+                            <span>₹220</span>
+                            <p>Enjoy the tallest burgers innovated by us. Created with perfectly fried corn and cheese patty paired along with fresh ingredients like jalape??o, onion, slice of cheese & crunchy lettuce dressed with cocktail sauce.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="item-image">
+                        <div class="item-image-desc">
+                            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" />
+                        </div>
+                        <div class="add-button">
+                            <button>Add</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -369,7 +367,52 @@
             var divToAppendImage = document.getElementById("replace-image");
             var imageStructure = `<img src="${restaurant.s_restImg}" alt="" />`;
             divToAppendImage.innerHTML = imageStructure;
-        }   
+
+
+            var swiggy_singleRestData = JSON.parse(localStorage.getItem("single_mcd_products"));
+            var singRestData = "";
+            var insertsingleProductToDiv = document.getElementById("replace-items");
+
+            for(var i=0;i<swiggy_singleRestData.length;i++){
+                singRestData += `<div class="title">
+                    <p>Recommended (5)</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+
+                <div class="item">
+                    <div class="item-desc">
+                        <div class="veg-logo">
+                            <img src="https://icon2.cleanpng.com/20180601/ae/kisspng-vegetarian-cuisine-biryani-indian-cuisine-vegetabl-vegetarian-5b11c2357677b7.0724399215278904854853.jpg" alt="" />
+                        </div>
+                        <div class="desc">
+                            <h3>${swiggy_singleRestData[i].m_prodname}</h3>
+                            <span>₹${swiggy_singleRestData[i].m_prodprice}</span>
+                            <p>Enjoy the tallest burgers innovated by us. Created with perfectly fried corn and cheese patty paired along with fresh ingredients like jalape??o, onion, slice of cheese & crunchy lettuce dressed with cocktail sauce.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="item-image">
+                        <div id="replace-image" class="item-image-desc">
+                            <img src="${swiggy_singleRestData[i].m_prodimg}" alt="" />
+                        </div>
+                        <div class="add-button">
+                            <button>Add</button>
+                        </div>
+                    </div>
+
+                    
+                </div>`;
+            }
+            insertsingleProductToDiv.innerHTML = singRestData;
+
+
+
+        }
+
+        function addCart(){
+            alert("product called");
+        }
 
     </script>
 </body>
