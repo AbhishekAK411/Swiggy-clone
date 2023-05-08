@@ -137,10 +137,10 @@
 
                     <div class="item-image">
                         <div id="replace-image" class="item-image-desc">
-                            <!-- <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" /> -->
+                            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" />
                         </div>
                         <div id="replace-cart" class="add-button">
-                            <!-- <button>Add</button> -->
+                            <button>Add</button>
                         </div>
                     </div>
 
@@ -352,7 +352,6 @@
     </div>
 
     <script>
-
         window.onload = () => {
             var restaurant = JSON.parse(localStorage.getItem("swiggy_currentRest"));
 
@@ -374,11 +373,7 @@
             var insertsingleProductToDiv = document.getElementById("replace-items");
 
             for(var i=0;i<swiggy_singleRestData.length;i++){
-                singRestData += `<div class="title">
-                    <p>Recommended (5)</p>
-                    <i class="fa-solid fa-angle-up"></i>
-                </div>
-
+                singRestData += `
                 <div class="item">
                     <div class="item-desc">
                         <div class="veg-logo">
@@ -397,7 +392,7 @@
                             <img src="${swiggy_singleRestData[i].m_prodimg}" alt="" />
                         </div>
                         <div class="add-button">
-                            <button>Add</button>
+                            <button onclick='addToCart(${JSON.stringify(swiggy_singleRestData[i])})'>Add</button>
                         </div>
                     </div>
 
@@ -410,8 +405,8 @@
 
         }
 
-        function addCart(){
-            alert("product called");
+        function addToCart(product){
+            alert("hello");
         }
 
     </script>
