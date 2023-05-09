@@ -36,9 +36,9 @@
                     <i class="fa-regular fa-user"></i>
                     <p>Sign In</p>
                 </div>
-                <div>
-                    <i class="fa-solid fa-basket-shopping"></i>
-                    <p>Cart</p>
+                <div id="replace-cart">
+                    <!-- <i class="fa-solid fa-basket-shopping"></i>
+                    <p>Cart</p> -->
                 </div>
             </div>
         </div>
@@ -402,11 +402,34 @@
             insertsingleProductToDiv.innerHTML = singRestData;
 
 
+            var divToAppendCart = document.getElementById("replace-cart");
+            var cartStructure = `<i class="fa-solid fa-basket-shopping"></i>
+                    <p onclick='redirect_cart()'>Cart</p>`;
+            divToAppendCart.innerHTML = cartStructure;
+
+
 
         }
 
         function addToCart(product){
-            alert("hello");
+            var swiggy_currentUser = JSON.parse(localStorage.getItem("swiggy_current_user"));
+            var swiggy_userData = JSON.parse(localStorage.getItem("swiggy_users"));
+
+            for(var i=0;i<swiggy_userData.length;i++){
+                if(swiggy_currentUser.userEmail == swiggy_userData[i].userEmail){
+                    if(swiggy_userData[i].cartProducts == undefined){
+                        swiggy_userData[i].cartProducts = [product];
+                    } else {
+                        swiggy_userData[i].cartProducts.push(product);
+                    }
+                }
+                alert("Product added to cart");
+            }
+            localStorage.setItem("swiggy_users", JSON.stringify(swiggy_userData));
+        }
+
+        function redirect_cart(){
+            window.location.href = `./cart.html`;
         }
 
     </script>

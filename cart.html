@@ -134,9 +134,67 @@
 
             <div class="order-list">
                 <div class="order-top">
-                    <div class="item-top"></div>
-                    <div class="item-mid"></div>
-                    <div class="item-bot"></div>
+                    <div class="item-top">
+                        <div id="replace-restaurant" class="inner-top">
+                            <div class="top-image">
+                                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/4d91eb6e4a6053046f924af5f6784985" alt="" />
+                            </div>
+                            <div class="top-text">
+                                <p>The Belgian Wallfle Co.</p>
+                                <span>Vashi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-mid">
+                        <div id="replace-cartItems" class="mid-section">
+                            <!-- <div class="mid-items">
+                                <div class="mitem-text">
+                                    <p>Keep Cake & Celebrate + 1 Free Delight</p>
+                                </div>
+                                <div class="mitem-quant">
+                                    <div class="minus">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="number">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="plus">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="mitem-price">
+                                    <p>₹580</p>
+                                </div>
+                            </div> -->
+                            <div class="apply-coupon">
+                                <i class="fa-solid fa-tag"></i>
+                                <p>Apply Coupon</p>
+                            </div>
+                            <div class="mid-bill">
+                                <h4>Bill Details</h4>
+                                <div class="bill-details">
+                                    <p>Item Total</p>
+                                    <span>₹580</span>
+                                </div>
+                                <div class="bill-details">
+                                    <p>Delivery Fee | 1.3 Kms</p>
+                                    <span>₹29</span>
+                                </div>
+                                <div class="charges">
+                                    <p>Govt. Taxes and Other Charges</p>
+                                    <span>₹50.03</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-bot">
+                        <div class="bot-left">
+                            <p>To Pay</p>
+                        </div>
+                        <div class="bot-right">
+                            <p>₹660</p>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -155,5 +213,61 @@
         </div>
 
     </div>
+
+    <script>
+
+        window.onload = () =>{
+            var swiggy_currentUser = JSON.parse(localStorage.getItem("swiggy_current_user"));
+            var swiggy_userData = JSON.parse(localStorage.getItem("swiggy_users"));
+            var swiggy_currentRest = JSON.parse(localStorage.getItem("swiggy_currentRest"));
+            var divToAppendProducts = document.getElementById("replace-cartItems");
+            var products;
+
+            for(var i=0;i<swiggy_userData.length;i++){
+                if(swiggy_currentUser.userEmail == swiggy_userData[i].userEmail){
+                    products = swiggy_userData[i].cartProducts;
+                }
+            }
+
+            var finalData = "";
+
+            for(var i=0;i<products.length;i++){
+                finalData += `<div class="mid-items">
+                                <div class="mitem-text">
+                                    <p>${products[i].m_prodname}</p>
+                                </div>
+                                <div class="mitem-quant">
+                                    <div class="minus">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="number">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="plus">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="mitem-price">
+                                    <p>₹${products[i].m_prodprice}</p>
+                                </div>
+                            </div>`;
+            }
+
+            divToAppendProducts.innerHTML = finalData;
+
+
+            var divToAppendRest = document.getElementById("replace-restaurant");
+            var restStructure = `<div class="top-image">
+                                <img src="${swiggy_currentRest.s_restImg}" alt="" />
+                            </div>
+                            <div class="top-text">
+                                <p>${swiggy_currentRest.s_restName}</p>
+                                <span>Vashi</span>
+                            </div>`;
+            
+            divToAppendRest.innerHTML = restStructure;
+        }
+
+    </script>
 </body>
 </html>
