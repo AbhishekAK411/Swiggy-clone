@@ -253,7 +253,28 @@
                             </div>`;
             }
 
+            billStructure = `<div class="apply-coupon">
+                                <i class="fa-solid fa-tag"></i>
+                                <p>Apply Coupon</p>
+                            </div>
+                            <div class="mid-bill">
+                                <h4>Bill Details</h4>
+                                <div class="bill-details">
+                                    <p>Item Total</p>
+                                    <span>₹580</span>
+                                </div>
+                                <div class="bill-details">
+                                    <p>Delivery Fee | 1.3 Kms</p>
+                                    <span>₹29</span>
+                                </div>
+                                <div class="charges">
+                                    <p>Govt. Taxes and Other Charges</p>
+                                    <span>₹50.03</span>
+                                </div>
+                            </div>`;
+
             divToAppendProducts.innerHTML = finalData;
+            divToAppendProducts.innerHTML += billStructure;
 
 
             var divToAppendRest = document.getElementById("replace-restaurant");
